@@ -1,11 +1,12 @@
 import React from 'react';
-import style from './contact.module.css';
+import styles from './contact.module.css';
+import Section from '../../components/ui/section/Section';
 
 function Contact() {
   return (
-    <section id="contact" className={style}>
+    <Section id="contact" className={styles.contact}>
       <h1>Contact</h1>
-    </section>
+    </Section>
   );
 }
 

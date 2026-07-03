@@ -1,11 +1,12 @@
 import React from 'react';
-import style from './projects.module.css';
+import styles from './projects.module.css';
+import Section from '../../components/ui/section/Section';
 
 function Projects() {
   return (
-    <section id="projects" className={style.projects}>
-      <h1>Projects</h1>
-    </section>
+    <Section id="projet" className={styles.project}>
+      <h1>Projets</h1>
+    </Section>
   );
 }
 

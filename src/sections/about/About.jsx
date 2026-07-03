@@ -1,11 +1,12 @@
 import React from 'react';
-import styles from './about.modules.css';
+import styles from './about.module.css';
+import Section from '../../components/ui/section/Section';
 
 function About() {
   return (
-    <section id="about" className={styles.about}>
+    <Section id="about" className={styles.about}>
       <h1>About</h1>
-    </section>
+    </Section>
   );
 }
 
