@@ -13,7 +13,7 @@ export const navLinks = [
   },
   {
     id: 'experience',
-    label: 'Expérience',
+    label: 'Expériences',
   },
   {
     id: 'projects',

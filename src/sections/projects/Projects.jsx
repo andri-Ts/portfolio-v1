@@ -4,7 +4,7 @@ import Section from '../../components/ui/section/Section';
 
 function Projects() {
   return (
-    <Section id="projet" className={styles.project}>
+    <Section id="projects" className={styles.project}>
       <h1>Projets</h1>
     </Section>
   );

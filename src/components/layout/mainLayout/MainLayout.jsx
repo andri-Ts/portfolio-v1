@@ -5,6 +5,7 @@ import Experience from '../../../sections/experience/Experience';
 import Projects from '../../../sections/projects/Projects';
 import Skills from '../../../sections/skills/Skills';
 import Navbar from '../navbar/Navbar';
+import Contact from '../../../sections/contact/Contact';
 
 function MainLayout() {
   return (
@@ -15,7 +16,7 @@ function MainLayout() {
       <Skills />
       <Experience />
       <Projects />
-      <Skills />
+      <Contact />
     </>
   );
 }

@@ -65,3 +65,7 @@
 .navigation a:hover {
   color: var(--color-primary);
 }
+
+.active {
+  color: var(--color-primary);
+}
