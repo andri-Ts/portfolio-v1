@@ -109,3 +109,4 @@ Footer
 Creation squellette des pages/sections
 Creation de MianLayout
 Decomposition de Navbar
+Definir les responsabilités de Navbar -> architecture
