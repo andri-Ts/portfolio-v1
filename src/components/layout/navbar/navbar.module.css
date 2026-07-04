@@ -1,0 +1,53 @@
+.header {
+  width: 100%;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+
+  padding: var(--spacing-lg) var(--spacing-xl);
+}
+
+/* LOGO CSS */
+
+.logo {
+  justify-self: start;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 2px;
+
+  font-size: var(--fs-xl);
+  font-weight: 700;
+}
+.logoBracket {
+  color: var(--color-primary);
+}
+.logoText {
+  color: var(--color-text);
+}
+
+/* NAVIGATION CSS */
+
+.navigation {
+  justify-self: center;
+}
+
+.navigation ul {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xl);
+}
+
+.navigation a {
+  transition: color var(--transition-fast);
+}
+
+.navigation a:hover {
+  color: var(--color-primary);
+}

@@ -1,0 +1,23 @@
+.socialLinks {
+  justify-self: end;
+}
+
+.socialLinks ul {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.socialLinks a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: var(--fs-lg);
+
+  transition: color var(--transition-fast);
+}
+
+.socialLinks a:hover {
+  color: var(--color-primary);
+}

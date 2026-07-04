@@ -4,7 +4,7 @@ import { socialLinks } from '../../../constants/socialLinks';
 
 function SocialLinks() {
   return (
-    <div className={styles.socialLink}>
+    <div className={styles.socialLinks}>
       <ul>
         {socialLinks.map((socialLink) => {
           const Icon = socialLink.icon;
