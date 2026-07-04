@@ -1,5 +1,19 @@
 .header {
   width: 100%;
+  height: var(--navbar-height);
+
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  z-index: 1000;
+
+  background: rgba(11, 17, 32, 0.75);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+.scrolled {
+  box-shadow: var(--shadow-md);
 }
 
 .container {
