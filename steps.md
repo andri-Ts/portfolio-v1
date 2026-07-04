@@ -103,3 +103,9 @@ Projects
 Contact
 ↓
 Footer
+
+---
+
+Creation squellette des pages/sections
+Creation de MianLayout
+Decomposition de Navbar
