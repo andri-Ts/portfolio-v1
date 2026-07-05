@@ -1,4 +1,4 @@
-.hero {
+.heroSection {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,21 +18,14 @@
 .title {
   font-size: var(--fs-4xl);
   font-weight: 700;
-  /* color: var(--color-text); */
-  color: green;
+  color: var(--color-text);
+  /* color: green; */
   margin-bottom: var(--spacing-sm);
 }
-
 .subtitle {
   font-size: var(--fs-xl);
   color: var(--color-text);
   margin-bottom: var(--spacing-lg);
-}
-
-.highlight {
-  color: var(--color-primary);
-  font-weight: 600;
-  transition: var(--transition-normal);
 }
 
 .description {
@@ -56,7 +49,6 @@
   text-decoration: none;
   transition: var(--transition-fast);
 }
-
 .primaryBtn:hover {
   transform: translateY(-2px);
 }
@@ -69,34 +61,7 @@
   text-decoration: none;
   transition: var(--transition-fast);
 }
-
 .secondaryBtn:hover {
   border-color: var(--color-primary);
   color: var(--color-primary);
-}
-
-.roles {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 3rem;
-  margin: 2rem 0;
-  flex-wrap: wrap;
-}
-
-.role {
-  font-size: var(--fs-xl);
-  transition: all 0.4s ease;
-}
-
-.active {
-  color: var(--color-primary);
-  font-weight: 600;
-  filter: blur(0);
-}
-
-.inactive {
-  color: var(--color-text);
-  opacity: 0.45;
-  filter: blur(3px);
 }

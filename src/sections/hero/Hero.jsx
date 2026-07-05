@@ -6,11 +6,13 @@ const roles = [
   'Développeur Web',
   'Ingénieur Logiciel',
   'Ingénieur Système Embarqué',
+  'test',
 ];
 
 function Hero() {
   const [activeRole, setActiveRole] = useState(0);
 
+  console.log('HERO RENDER');
   //----------------------------
   // Rotation automatique des mots
   //---------------------------
