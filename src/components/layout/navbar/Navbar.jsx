@@ -33,39 +33,6 @@ function Navbar() {
   //------------------------
   // Observer les sections.
   //------------------------
-  // useEffect(() => {
-  //   // Récupère toutes les balises <section> de la page
-  //   const observedSections = document.querySelectorAll('section');
-
-  //   // Crée un observateur qui sera notifié lorsqu'une section entre ou sort de la zone visible de l'écran
-  //   const observer = new IntersectionObserver(
-  //     (entries) => {
-  //       // Parcourt les sections dont la visibilité a changé
-  //       for (const entry of entries) {
-  //         // Si la section est actuellement visible
-  //         if (entry.isIntersecting) {
-  //           setActiveSection(entry.target.id);
-  //           break; // Une seule section active nous suffit
-  //         }
-  //       }
-  //     },
-  //     {
-  //       threshold: 0, // une section touche la zone observée, déclenche la callback
-  //       rootMargin: ACTIVE_SECTION_ROOT_MARGIN, // Zone d'observation au centre de l'écran, une section devient active lorsqu'elle traverse cette zone
-  //     },
-  //   );
-
-  //   // Demande à l'observateur de surveiller chaque section
-  //   observedSections.forEach((section) => {
-  //     observer.observe(section);
-  //   });
-
-  //   // Nettoyage : arrête l'observation lorsque le composant est démonté
-  //   return () => {
-  //     observer.disconnect();
-  //   };
-  // }, []);
-
   useEffect(() => {
     const handleActiveSection = () => {
       const sections = document.querySelectorAll('section');
