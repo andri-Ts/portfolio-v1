@@ -1,8 +1,27 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './hero.module.css';
 import Section from '../../components/ui/section/Section';
 
+const roles = [
+  'Développeur Web',
+  'Ingénieur Logiciel',
+  'Ingénieur Système Embarqué',
+];
+
 function Hero() {
+  const [activeRole, setActiveRole] = useState(0);
+
+  //----------------------------
+  // Rotation automatique des mots
+  //---------------------------
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveRole((prevValue) => (prevValue + 1) % roles.length);
+    }, 2000); // Change tous les 2s
+
+    return () => clearInterval(interval);
+  }, []);
+
   return (
     <Section id="hero" className={styles.hero}>
       <div className={styles.container}>
@@ -10,10 +29,23 @@ function Hero() {
 
         <h1 className={styles.title}>Je suis Ticyano</h1>
 
-        <h2 className={styles.subtitle}>
-          <span className={styles.highlight}>[Développeur Web]</span> &
-          Ingénieur en Systèmes Embarqués
-        </h2>
+        {/* <h2 className={styles.subtitle}>
+          <span className={styles.highlight}>[{words[index]}]</span> & Ingénieur
+          en Systèmes Embarqués
+        </h2> */}
+
+        <div className={styles.roles}>
+          {roles.map((role, index) => (
+            <span
+              key={role}
+              className={`${styles.role} ${
+                activeRole === index ? styles.active : styles.inactive
+              }`}
+            >
+              {activeRole === index ? `[${role}]` : role}
+            </span>
+          ))}
+        </div>
 
         <p className={styles.description}>
           Je crée des solutions innovantes avec l’IA, les technologies web et
