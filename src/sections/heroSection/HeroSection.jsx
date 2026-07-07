@@ -24,7 +24,7 @@ function HeroSection() {
 
   return (
     <Section className={styles.heroSection}>
-      <div className={styles.container}>
+      <div className={styles.content}>
         <p className={styles.greeting}>Bonjour 👋</p>
 
         <h1 className={styles.title}>Je suis Ticyano</h1>

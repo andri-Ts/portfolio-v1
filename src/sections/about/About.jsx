@@ -6,9 +6,16 @@ import AboutRight from './AboutRight';
 
 function About() {
   console.log('ABOUT RENDER');
+
   return (
-    <Section id="about" className={styles.about}>
-      <div className={styles.container}>
+    <Section id="about">
+      <span className={styles.badge}>À PROPOS</span>
+
+      <h2 className={styles.title}>
+        À <span>propos</span> de moi
+      </h2>
+
+      <div className={styles.grid}>
         <AboutLeft />
         <AboutRight />
       </div>

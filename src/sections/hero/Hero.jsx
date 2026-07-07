@@ -26,8 +26,8 @@ function Hero() {
 
   return (
     <Section id="hero" className={styles.hero}>
-      <div className={styles.container}>
-        <p className={styles.greeting}>Bonjour 👋</p>
+      <div className={styles.content}>
+        <p className={styles.greeting}>Bonjour x👋</p>
 
         <h1 className={styles.title}>Je suis Ticyano</h1>
 

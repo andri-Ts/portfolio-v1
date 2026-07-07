@@ -6,13 +6,13 @@ function AboutCard({ highlight }) {
 
   return (
     <article className={styles.card}>
-      <div className={styles.icon}>
-        <Icon />
+      <div className={styles.iconWrapper}>
+        <Icon className={styles.icon} />
       </div>
 
-      <h3>{highlight.title}</h3>
+      <h3 className={styles.cardTitle}>{highlight.title}</h3>
 
-      <p>{highlight.description}</p>
+      <p className={styles.cardDescription}>{highlight.description}</p>
     </article>
   );
 }

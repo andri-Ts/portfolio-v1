@@ -5,12 +5,6 @@ function AboutLeft() {
   return (
     <div>
       <div className={styles.left}>
-        <span className={styles.badge}>À PROPOS</span>
-
-        <h2 className={styles.title}>
-          À <span>propos</span> de moi
-        </h2>
-
         <p className={styles.description}>
           Diplômé en ingénierie des systèmes embarqués, je conçois des
           applications web modernes tout en gardant un fort intérêt pour les

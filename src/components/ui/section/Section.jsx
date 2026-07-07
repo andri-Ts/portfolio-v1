@@ -3,7 +3,7 @@ import styles from './section.module.css';
 function Section({ id, className, children, ...rest }) {
   return (
     <section id={id} className={`${styles.section} ${className || ''}`}>
-      {children}
+      <div className={styles.container}>{children}</div>
     </section>
   );
 }
