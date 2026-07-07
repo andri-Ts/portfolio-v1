@@ -61,21 +61,39 @@
   margin-bottom: var(--spacing-xl);
 }
 
-.avatar {
-  width: 240px;
-  height: 240px;
+.avatarWrapper {
+  display: flex;
+  justify-content: center;
 
-  margin: 0 auto var(--spacing-xl);
+  margin: var(--spacing-xl) 0;
+}
+
+.avatar {
+  width: 220px;
+  height: 220px;
 
   border-radius: 50%;
 
-  background: var(--color-surface-light);
+  background: var(--color-surface);
+
+  border: 2px solid var(--color-primary);
 
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
 
-  color: var(--color-text-secondary);
+  box-shadow: 0 0 40px rgba(59, 130, 246, 0.15);
+
+  transition: var(--transition-normal);
+}
+.avatar:hover {
+  transform: scale(1.03);
+}
+.avatar span {
+  font-size: 5rem;
+  font-weight: bold;
+
+  color: var(--color-primary);
 }
 
 /* ========= ABOUT RIGHT ========= */

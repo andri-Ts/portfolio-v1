@@ -11,7 +11,11 @@ function AboutLeft() {
           logiciels proches du matériel.
         </p>
 
-        <div className={styles.avatar}>Avatar</div>
+        <div className={styles.avatarWrapper}>
+          <div className={styles.avatar}>
+            <span>T</span>
+          </div>
+        </div>
 
         <p className={styles.description}>
           J'aime concevoir aussi bien des applications web modernes que des
