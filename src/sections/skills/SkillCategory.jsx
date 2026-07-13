@@ -1,17 +1,17 @@
-import Tag from '../../components/ui/tag/Tag';
 import styles from './skills.module.css';
+import SkillCard from './SkillCard';
 
 function SkillCategory({ category }) {
   return (
-    <article className={styles.card}>
-      <h3 className={styles.cardTitle}>{category.title}</h3>
+    <div className={styles.category}>
+      <h3 className={styles.categoryTitle}>{category.title}</h3>
 
-      <div className={styles.tags}>
+      <div className={styles.skillsGrid}>
         {category.technologies.map((technology) => (
-          <Tag key={technology}>{technology}</Tag>
+          <SkillCard key={technology.id} technology={technology} />
         ))}
       </div>
-    </article>
+    </div>
   );
 }
 
