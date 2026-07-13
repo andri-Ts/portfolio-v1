@@ -4,6 +4,7 @@ export const experiences = [
     period: 'Juil. 2025 - Aujourd’hui',
     title: 'Développeur logiciel & Responsable bénévole',
     company: 'Association',
+    contract: 'Bénévolat',
     location: 'Ville de Paris',
     description:
       "Coordination des activités de l'association et développement d'outils numériques destinés à améliorer l'organisation, la communication et la gestion des activités.",
@@ -13,9 +14,10 @@ export const experiences = [
   {
     id: 2,
     period: 'Juin 2022 - Sept. 2024',
-    title: 'Ingénieur Développement Logiciel',
+    title: 'Ingénieur applications logicielles',
     company: 'AMDP Solution',
-    location: 'Île-de-France • Hybride',
+    contract: 'CDD',
+    location: 'Île-de-France · Hybride',
     description:
       "Développement d'un CRM web en environnement Agile (Scrum), avec des contributions sur le front-end React.js, le back-end C#/.NET et l'intégration d'API REST.",
     technologies: [
@@ -33,7 +35,8 @@ export const experiences = [
     period: 'Avr. 2019 - Août 2019',
     title: 'Développeur Logiciel',
     company: 'ASECNA',
-    location: 'Stage',
+    contract: 'Stage',
+    location: 'Antananarivo, Madagascar',
     description:
       "Développement d'un convertisseur de trames radar au format ASTERIX en Java pour le traitement de données issues des systèmes de surveillance aérienne.",
     technologies: ['Java', 'ASTERIX', 'Traitement de données'],
@@ -44,9 +47,10 @@ export const experiences = [
     period: 'Nov. 2016 - Janv. 2017',
     title: 'Concepteur logiciels',
     company: 'Ménagerie Technologique',
-    location: 'Stage',
+    contract: 'Stage',
+    location: 'Cachan, France',
     description:
       "Conception d'un système robotisé de jeu (tic-tac-toe) avec vision par caméra, contrôle moteur et logique de difficulté progressive.",
-    technologies: ['Vision par caméra', 'Robotique', 'SPEL+', 'Algorithmique'],
+    technologies: ['Vision', 'Robotique', 'SPEL+', 'Algorithmique'],
   },
 ];

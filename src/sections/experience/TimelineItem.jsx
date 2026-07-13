@@ -1,5 +1,5 @@
-import styles from './experience.module.css';
 import Tag from '../../components/ui/tag/Tag';
+import styles from './experience.module.css';
 import { motion } from 'motion/react';
 
 function TimelineItem({ experience }) {
@@ -34,14 +34,17 @@ function TimelineItem({ experience }) {
         <h3 className={styles.jobTitle}>{experience.title}</h3>
 
         <p className={styles.company}>
-          {experience.company} • {experience.location}
+          {experience.company} • {experience.contract}
         </p>
+
+        <p className={styles.location}>{experience.location}</p>
 
         <p className={styles.descriptionText}>{experience.description}</p>
 
         <div className={styles.tags}>
           {experience.technologies.map((technology) => (
-            <Tag key={technology} text={technology} />
+            <Tag key={technology}>{technology}</Tag>
+            // <span>{technology}</span>
           ))}
         </div>
       </div>
