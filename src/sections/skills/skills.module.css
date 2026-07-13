@@ -1,3 +1,76 @@
-.skills {
-  background-color: blue;
+/* ========= HEADER ========= */
+
+.badge {
+  display: block;
+
+  text-align: center;
+
+  color: var(--color-primary);
+
+  font-size: var(--fs-sm);
+  font-weight: 600;
+
+  letter-spacing: 2px;
+  text-transform: uppercase;
+
+  margin-bottom: var(--spacing-md);
+}
+
+.title {
+  text-align: center;
+  font-size: var(--fs-4xl);
+  margin-bottom: var(--spacing-lg);
+}
+
+.title span {
+  color: var(--color-primary);
+}
+
+.description {
+  max-width: 700px;
+  margin: 0 auto var(--spacing-3xl);
+  text-align: center;
+
+  color: var(--color-text-secondary);
+  line-height: 1.7;
+}
+
+/* =========  GRID ========= */
+
+.grid {
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: var(--spacing-xl);
+}
+
+/* =========  CARTES ========= */
+
+.card {
+  background: var(--color-surface);
+
+  border: 1px solid var(--color-surface-light);
+  border-radius: var(--radius-lg);
+  padding: var(--spacing-xl);
+
+  transition: var(--transition-normal);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  border-color: var(--color-primary);
+  box-shadow: var(--shadow-md);
+}
+
+.cardTitle {
+  font-size: var(--fs-xl);
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-text);
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
 }

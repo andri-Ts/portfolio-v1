@@ -6,11 +6,11 @@ function SkillCategory({ category }) {
     <article className={styles.card}>
       <h3 className={styles.cardTitle}>{category.title}</h3>
 
-      <ul className={styles.list}>
+      <div className={styles.tags}>
         {category.technologies.map((technology) => (
           <Tag key={technology}>{technology}</Tag>
         ))}
-      </ul>
+      </div>
     </article>
   );
 }
