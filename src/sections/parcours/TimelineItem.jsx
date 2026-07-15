@@ -1,5 +1,5 @@
 import Tag from '../../components/ui/tag/Tag';
-import styles from './experience.module.css';
+import styles from './parcours.module.css';
 import { motion } from 'motion/react';
 
 function TimelineItem({ experience }) {

@@ -4,7 +4,7 @@ import { motion, useScroll, useTransform } from 'motion/react';
 import { experiences } from '../../constants/experiences';
 import TimelineItem from './TimelineItem';
 
-import styles from './experience.module.css';
+import styles from './parcours.module.css';
 
 function Timeline() {
   const timelineRef = useRef(null);

@@ -1,8 +1,8 @@
-import styles from './experience.module.css';
+import styles from './parcours.module.css';
 import Section from '../../components/ui/section/Section';
 import Timeline from './Timeline';
 
-function Experience() {
+function Parcours() {
   return (
     <Section id="experience">
       <span className={styles.badge}>EXPÉRIENCE</span>
@@ -21,4 +21,4 @@ function Experience() {
   );
 }
 
-export default Experience;
+export default Parcours;

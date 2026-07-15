@@ -1,11 +1,11 @@
 import React from 'react';
 import About from '../../../sections/about/About';
-import Experience from '../../../sections/experience/Experience';
 import Projects from '../../../sections/projects/Projects';
 import Skills from '../../../sections/skills/Skills';
 import Navbar from '../navbar/Navbar';
 import Contact from '../../../sections/contact/Contact';
 import HeroSection from '../../../sections/heroSection/HeroSection';
+import Parcours from '../../../sections/parcours/Parcours';
 
 function MainLayout() {
   return (
@@ -14,7 +14,7 @@ function MainLayout() {
       <HeroSection />
       <About />
       <Skills />
-      <Experience />
+      <Parcours />
       <Projects />
       <Contact />
     </>
