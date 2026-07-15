@@ -4,7 +4,7 @@
   justify-content: center;
 
   padding: 0.45rem 0.9rem;
-  border-radius: var(--radius-full);
+  border-radius: var(--radius-md);
 
   background: var(--color-surface-light);
   color: var(--color-text);
