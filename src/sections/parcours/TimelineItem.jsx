@@ -2,18 +2,14 @@ import Tag from '../../components/ui/tag/Tag';
 import styles from './parcours.module.css';
 import { motion } from 'motion/react';
 
-function TimelineItem({ experience }) {
+function TimelineItem({ item }) {
+  const isExperience = !!item.company;
+
   return (
     <motion.article
       className={styles.timelineItem}
-      initial={{
-        opacity: 0,
-        y: 40,
-      }}
-      whileInView={{
-        opacity: 1,
-        y: 0,
-      }}
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
       viewport={{
         once: true,
         amount: 0.3,
@@ -29,24 +25,37 @@ function TimelineItem({ experience }) {
 
       {/* Contenu */}
       <div className={styles.content}>
-        <p className={styles.period}>{experience.period}</p>
+        <p className={styles.period}>{item.period}</p>
 
-        <h3 className={styles.jobTitle}>{experience.title}</h3>
+        {isExperience ? (
+          <>
+            <h3 className={styles.jobTitle}>{item.title}</h3>
 
-        <p className={styles.company}>
-          {experience.company} • {experience.contract}
-        </p>
+            <p className={styles.company}>
+              {item.company} • {item.contract}
+            </p>
 
-        <p className={styles.location}>{experience.location}</p>
+            <p className={styles.location}>{item.location}</p>
 
-        <p className={styles.descriptionText}>{experience.description}</p>
+            <p className={styles.descriptionText}>{item.description}</p>
 
-        <div className={styles.tags}>
-          {experience.technologies.map((technology) => (
-            <Tag key={technology}>{technology}</Tag>
-            // <span>{technology}</span>
-          ))}
-        </div>
+            <div className={styles.tags}>
+              {item.technologies.map((technology) => (
+                <Tag key={technology} text={technology} />
+              ))}
+            </div>
+          </>
+        ) : (
+          <>
+            <h3 className={styles.jobTitle}>{item.school}</h3>
+
+            <p className={styles.company}>{item.diploma}</p>
+
+            <p className={styles.location}>{item.specialization}</p>
+
+            <p className={styles.descriptionText}>{item.location}</p>
+          </>
+        )}
       </div>
     </motion.article>
   );
