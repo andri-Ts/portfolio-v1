@@ -12,7 +12,7 @@ export const navLinks = [
     label: 'Compétences',
   },
   {
-    id: 'experience',
+    id: 'parcours',
     label: 'Expériences',
   },
   {
