@@ -6,6 +6,7 @@ import Navbar from '../navbar/Navbar';
 import Contact from '../../../sections/contact/Contact';
 import HeroSection from '../../../sections/heroSection/HeroSection';
 import Parcours from '../../../sections/parcours/Parcours';
+import Footer from '../../../sections/footer/Footer';
 
 function MainLayout() {
   return (
@@ -17,6 +18,7 @@ function MainLayout() {
       <Parcours />
       <Projects />
       <Contact />
+      <Footer />
     </>
   );
 }
