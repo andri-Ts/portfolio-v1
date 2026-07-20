@@ -31,3 +31,31 @@
 
   font-size: var(--fs-sm);
 }
+
+/* ========= TABLETTE ========= */
+
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 var(--spacing-xl);
+  }
+}
+
+/* ========= MOBILE ========= */
+
+@media (max-width: 768px) {
+  .footer {
+    margin-top: var(--spacing-3xl);
+
+    padding: var(--spacing-2xl) 0;
+  }
+
+  .thanks {
+    font-size: var(--fs-sm);
+  }
+
+  .copyright {
+    font-size: var(--fs-xs);
+
+    line-height: 1.6;
+  }
+}

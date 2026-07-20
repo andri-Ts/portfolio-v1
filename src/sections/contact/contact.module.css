@@ -43,7 +43,7 @@
 
 .container {
   display: grid;
-  grid-template-columns: 380px 1fr;
+  grid-template-columns: minmax(300px, 380px) 1fr;
 
   gap: var(--spacing-3xl);
 
@@ -276,5 +276,68 @@
 
   .title {
     font-size: var(--fs-3xl);
+  }
+}
+
+/* ========= TABLETTE ========= */
+
+@media (max-width: 1024px) {
+  .title {
+    font-size: var(--fs-3xl);
+  }
+
+  .container {
+    grid-template-columns: 1fr;
+
+    gap: var(--spacing-2xl);
+  }
+
+  .info {
+    order: 2;
+  }
+
+  .form {
+    order: 1;
+  }
+}
+
+/* ========= MOBILE ========= */
+
+@media (max-width: 768px) {
+  .title {
+    font-size: var(--fs-2xl);
+  }
+
+  .description {
+    margin-bottom: var(--spacing-2xl);
+  }
+
+  .form {
+    padding: var(--spacing-xl);
+  }
+
+  .card {
+    padding: var(--spacing-lg);
+  }
+
+  .iconContainer {
+    width: 52px;
+    height: 52px;
+  }
+
+  .icon {
+    font-size: 1.4rem;
+  }
+
+  .cardTitle {
+    font-size: var(--fs-md);
+  }
+
+  .cardValue {
+    font-size: var(--fs-sm);
+  }
+
+  .submitButton {
+    width: 100%;
   }
 }
