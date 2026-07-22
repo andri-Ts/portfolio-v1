@@ -19,7 +19,7 @@
 .title {
   text-align: center;
   font-size: var(--fs-4xl);
-  margin-bottom: var(--spacing-lg);
+  margin-bottom: var(--spacing-2xl);
 }
 
 .title span {
