@@ -4,13 +4,13 @@ export const socialLinks = [
   {
     id: 'Github',
     icon: FaGithub,
-    href: 'https://github.com/',
+    href: 'https://github.com/andri-Ts/',
     label: 'Github',
   },
   {
     id: 'Linkedin',
     icon: FaLinkedin,
-    href: 'https://linkedin.com/',
+    href: 'https://linkedin.com/in/ticyano-andriamaro',
     label: 'Linkedin',
   },
 ];

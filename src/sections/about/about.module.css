@@ -151,3 +151,54 @@
   font-size: 1.7rem;
   color: var(--color-primary);
 }
+
+/* ========= TABLETTE ========= */
+
+@media (max-width: 1024px) {
+  .grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-3xl);
+  }
+
+  .left {
+    text-align: center;
+  }
+
+  .avatarWrapper {
+    margin: var(--spacing-2xl) 0;
+  }
+
+  .right {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+
+  .title {
+    font-size: var(--fs-3xl);
+  }
+}
+
+/* ========= MOBILE ========= */
+
+@media (max-width: 768px) {
+  .title {
+    font-size: var(--fs-2xl);
+  }
+
+  .avatar {
+    width: 180px;
+    height: 180px;
+  }
+
+  .avatar span {
+    font-size: 4rem;
+  }
+
+  .right {
+    grid-template-columns: 1fr;
+  }
+
+  .card {
+    padding: var(--spacing-lg);
+  }
+}

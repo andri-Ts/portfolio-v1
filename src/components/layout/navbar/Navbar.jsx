@@ -1,44 +1,39 @@
 import React, { useEffect, useState } from 'react';
+import { HiOutlineBars3, HiOutlineXMark } from 'react-icons/hi2';
+
 import Logo from './Logo';
 import Navigation from './Navigation';
 import SocialLinks from '../../ui/socialLinks/SocialLinks';
+
 import styles from './navbar.module.css';
 
-const NAVBAR_SHADOW_SCROLL = 10;
 const ACTIVE_SECTION_OFFSET = 120;
 
 function Navbar() {
   const [hasScrolled, setHasScrolled] = useState(false);
   const [activeSection, setActiveSection] = useState('hero');
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
-  //----------------------------
-  // Gérer l'ombre de la Navbar.
-  //----------------------------
+  // Ombre navbar
   useEffect(() => {
-    // Creation de la fonc qui detecte combien de scorll
     const handleScroll = () => {
-      const shouldShowShadow = window.scrollY > 10;
-      setHasScrolled(shouldShowShadow); // Met à jour l'état selon la position du scroll
+      setHasScrolled(window.scrollY > 10);
     };
 
-    // Appel de la fonction à la detection de scroll
-    window.addEventListener('scroll', handleScroll, { passive: true });
+    window.addEventListener('scroll', handleScroll, {
+      passive: true,
+    });
 
-    // clean le listener à la destruction du composant
     return () => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-  //------------------------
-  // Observer les sections.
-  //------------------------
+  // Section active
   useEffect(() => {
     const handleActiveSection = () => {
       const sections = document.querySelectorAll('section');
 
-      // Si on est tout en bas de la page,
-      // la dernière section devient active.
       const isBottomPage =
         window.innerHeight + window.scrollY >=
         document.documentElement.scrollHeight - 10;
@@ -61,19 +56,25 @@ function Navbar() {
       }
     };
 
-    // Vérifie la section active au chargement
     handleActiveSection();
 
-    // Vérifie la section active pendant le scroll
     window.addEventListener('scroll', handleActiveSection, {
       passive: true,
     });
 
-    // Nettoyage
     return () => {
       window.removeEventListener('scroll', handleActiveSection);
     };
   }, []);
+
+  // Bloquer le scroll quand le menu est ouvert
+  useEffect(() => {
+    document.body.style.overflow = isMenuOpen ? 'hidden' : '';
+
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [isMenuOpen]);
 
   return (
     <header
@@ -81,8 +82,24 @@ function Navbar() {
     >
       <div className={styles.container}>
         <Logo />
-        <Navigation activeSection={activeSection} />
-        <SocialLinks />
+
+        <Navigation
+          activeSection={activeSection}
+          isMenuOpen={isMenuOpen}
+          setIsMenuOpen={setIsMenuOpen}
+        />
+
+        <div className={styles.desktopSocial}>
+          <SocialLinks />
+        </div>
+
+        <button
+          className={styles.menuButton}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+          aria-label="Menu"
+        >
+          {isMenuOpen ? <HiOutlineXMark /> : <HiOutlineBars3 />}
+        </button>
       </div>
     </header>
   );

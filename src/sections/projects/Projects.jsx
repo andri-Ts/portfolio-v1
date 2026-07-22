@@ -11,11 +11,11 @@ function Projects() {
         Mes <span>projets</span>
       </h2>
 
-      <p className={styles.description}>
+      {/* <p className={styles.description}>
         Une sélection de projets réalisés en développement web, systèmes
         embarqués et programmation bas niveau, illustrant mon approche de la
         conception logicielle et de la résolution de problèmes.
-      </p>
+      </p> */}
 
       <ProjectsList />
     </Section>
